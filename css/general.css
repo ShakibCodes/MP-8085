@@ -1,0 +1,757 @@
+@font-face {
+	font-family: 'LCDMono2 Light';
+	src: url('../font/lcdmonolight.ttf');
+}
+
+/* Rules for sizing the icon. */
+.material-icons { font-size: 18px !important; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-30 { font-size: 30px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* GLOBAL: Deep Navy Background, Soft White Text */
+html, body {
+	font-family: 'Roboto Mono', 'Courier New', monospace, sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #1E2738; /* Deep Navy Blue */
+	color: #E6F1FF; /* Soft White */
+
+	-webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+br {
+	display: none;
+}
+
+.heading {
+	display: block;
+	width: 100%;
+	padding: 1.5em 1.7em 0 1.7em;
+	box-sizing: border-box;
+}
+
+/* HEADING: Electric Blue Accent */
+.heading > h1 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	color: #00BFFF; /* Electric Blue Accent */
+	position: relative;
+	margin: 0;
+	box-sizing: border-box;
+	display: inline-block;
+
+	z-index: 50;
+}
+
+/* HEADING BUTTONS: Subtle Dark Hover/Active */
+.heading > a {
+	cursor: pointer;
+	float: right;
+	color: #E6F1FF;
+	text-decoration: none;
+	display: block;
+	background-color: transparent;
+	padding: 0.5em 0.75em;
+	margin-top: -0.5em;
+	border-radius: 4px;
+	transition: all 0.05s ease-in-out;
+}
+
+.heading > a:hover {
+	float: right;
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
+	display: block;
+	background-color: rgba(0,0,0,0.3);
+	padding: 0.5em 0.75em;
+	margin-top: -0.5em;
+	border-radius: 4px;
+	border-bottom: none;
+	transform: none; /* Removed translate */
+}
+
+.heading > a:active {
+	float: right;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+	background-color: rgba(0,0,0,0.5);
+	padding: 0.5em 0.75em;
+	transform: none; /* Removed translate */
+	border-bottom: none;
+	margin-top: -0.5em;
+	border-radius: 4px;
+}
+
+#wrapper {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 1.5em;
+}
+
+.display-helper--container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin-bottom: 10px;
+}
+
+/* DISPLAY PANEL: Lighter Panel */
+.display {
+	display: flex;
+	flex-direction: row;
+	background-color: #2A3547; /* Lighter Blue-Grey Panel */
+	box-sizing: border-box;
+	border-radius: 5px;
+	height: 80px;
+	width: 356px;
+	box-sizing: border-box;
+	margin-right: 15px;
+	border: 1px solid #00BFFF; /* Electric Blue border */
+}
+
+/* DISPLAY INPUTS: Electric Blue Text */
+.display > input {
+	font-family: 'LCDMono2 Light', 'Courier New', monospace, sans-serif;
+
+	border: none;
+	border-right: 1px solid #1E2738; /* Dark border between cells */
+	color: #00BFFF; /* Electric Blue Text */
+	font-size: 2.3em;
+	font-weight: 300;
+	display: inline-block;
+	padding: 0.5em 0em;
+	box-sizing: border-box;
+	text-align: center;
+	width: 50px;
+	flex-grow: 1;
+	text-transform: uppercase;
+	height: 100%;
+	background: none;
+}
+
+.display > input:hover {
+	background-color: rgba(0,0,0,0.2);
+}
+
+.display > input:focus {
+	border: none;
+	background-color: rgba(0,0,0,0.1);
+	outline: none;
+}
+
+.display > input:first-child {
+	margin-left: 0;
+	padding-left: 4px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.display > input:nth-child(5) {
+	border-left: 6px solid #1E2738;
+	margin-left: -5px;
+	width: 66px;
+}
+
+.display > input:last-child {
+	border-right: none;
+	margin-right: 0;
+
+	width: 60px;
+
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/* HELPER TEXT PANEL: Lighter Panel with Blue Accent */
+.helper-text {
+	display: inline-block;
+	background-color: #2A3547; /* Lighter Blue-Grey Panel */
+	height: 80px;
+	font-size: 0.92em;
+	box-sizing: border-box;
+	vertical-align: top;
+	padding: 0.75em 1em;
+	border-radius: 5px;
+	position: relative;
+	min-width: 250px;
+	margin-right: 15px;
+	border-left: 4px solid #00BFFF; /* Electric Blue Accent Bar */
+}
+
+.bottom-text {
+	font-size: 0.8em;
+	text-transform: uppercase;
+	bottom: 0.75em;
+	position: absolute;
+	display: block;
+}
+
+.helper-text-description {
+	width: 400px;
+	flex-grow: 1;
+	margin-right: 0;
+}
+
+#helper-main{
+	width: 18em;
+	flex-grow: 0;
+	display: block;
+}
+.helper.helper > span {
+	display: block;
+}
+
+.register-buttons--container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: calc(100vw - 3em);
+	box-sizing: border-box;
+}
+
+.keypad-buttons--container {
+	user-select: none;
+	display: flex;
+	width: 356px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 10px 15px 10px 0; 
+
+}
+
+/* KEYPAD BUTTONS: Flat, Lighter Panel */
+.keypad-button, .extra-button {
+	display: block;
+	cursor: pointer;
+	height: 84px;
+	width: 84px;
+	margin-bottom: 10px;
+	background-color: #2A3547; /* Lighter Blue-Grey Panel */
+	border-radius: 3px;
+	box-sizing: border-box;
+	padding: 1em;
+	text-align: center;
+	transition: all 0.1s ease-in-out; /* Slower transition */
+	color: #E6F1FF;
+	font-size: 1.5em;
+	box-shadow: none; /* Removed 3D Shadow */
+	border: 1px solid transparent;
+}
+
+.keypad-button > span {
+	display: block;
+	color: #E6F1FF;
+}
+
+.keypad-button .upper{
+	font-size: 1.5em;
+}
+
+.extra-buttons--container {
+	user-select: none;
+	display: flex;
+	width: 177px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 10px 15px 10px 0;  
+}
+
+/* EXTRA BUTTONS: Solid Electric Blue */
+.extra-button {
+	padding: 1em 0.4em;
+	text-align: center;
+	background-color: #00BFFF !important; /* Electric Blue */
+	color: #1E2738; /* Dark Text */
+	box-shadow: none !important;
+}
+
+/* HOVER/ACTIVE: Simple Background Change, No Transform */
+.extra-button:hover {
+	background-color: #007AA3 !important; /* Darker Blue */
+	color: #FFFFFF;
+	box-shadow: none !important;
+}
+.extra-button:active {
+	background-color: #005075 !important;
+	color: #FFFFFF;
+	box-shadow: none !important;
+}
+.keypad-button:hover {
+	background-color: #3A4557;
+	border: 1px solid #00BFFF; /* Subtle blue border on hover */
+	box-shadow: none;
+	transform: none;
+}
+
+.keypad-button:active {
+	background-color: #4A5567;
+	box-shadow: none;
+	transform: none;
+}
+
+/* REGISTER PANEL: Lighter Panel */
+.registers--container {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: row;
+	flex-wrap: wrap;
+	vertical-align: top;
+	box-sizing: border-box;
+	margin: 10px 0 17px 0;
+	border-radius: 6px;
+	overflow: hidden;
+	background-color: #2A3547; /* Lighter Blue-Grey Panel */
+	border: 1px solid #1E2738; /* Darker separator */
+}
+
+/* REGISTER CELLS: Slight Transparency */
+.register {
+	display: block;
+	padding: 1.2em 0.7em;
+	background-color: rgba(0,0,0,0.1); /* Slight darker tint */
+	margin: 0;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.register > em {
+	font-style: normal;
+	display: inline-block;
+	margin-left: -0.5em;
+	opacity: 0.2;
+}
+
+.register.half {
+	flex-grow: 1;
+	border-right: 1px solid rgba(0,0,0,0.2);
+	width: 45%;
+}
+
+.register.half:nth-child(3n+2) {
+	border-right: none;
+}
+
+.register.full {
+	width: 90%;
+	flex-grow: 1;
+}
+
+.register.full:last-child {
+	border: none;
+}
+
+.register > i {
+	font-style: normal;
+	color: #00BFFF; /* Electric Blue for Register Values */
+}
+
+.register > b {
+	display: inline-block;
+	float: right;
+	font-weight: 400;
+	opacity: 0.5;
+}
+
+#register-F {
+	text-align: center;
+}
+
+.register-flags {
+	display: inline-block;
+	border-right: 1px solid rgba(0,0,0,0.1);
+	margin-left: -0.58em;
+	padding: 0 0.55em;
+	position: relative;
+	color: #00BFFF; /* Electric Blue for Flag Values */
+}
+
+/* Toast Messages */
+.toast {
+	background-color: #00BFFF; /* Electric Blue Toast */
+	color: #1E2738;
+	padding: 1em;	
+	top: 4.5em;
+	left: calc(50vw - 100px);
+	width: 200px;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.2), 0 6px 10px rgba(0,0,0,0.1);
+	position: fixed;
+	z-index: 40;
+	transition: all 0.2s ease-in-out;
+}
+
+.toast.hidden {
+	top: -10em;
+}
+
+.toast.shareOverride {
+	width: 400px;
+	left: calc(50vw - 200px);
+	transition: all 0.2s ease-in-out, width, left 0s linear !important;
+}
+
+.toast-black {
+	background-color: #2A3547; /* Darker Toast */
+	color: #E6F1FF;
+	padding: 1em;	
+	top: 4.5em;
+	left: calc(50vw - 200px);
+	width: 400px;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.2), 0 6px 10px rgba(0,0,0,0.1);
+	position: fixed;
+	z-index: 40;
+	transition: all 0.2s ease-in-out;
+}
+
+.toast-black.hidden {
+	top: -10em;
+}
+
+.mobile-only, #menu, #menu--button {
+	display: none;
+}
+
+/*
+--- MOBILE/RESPONSIVE VIEW CHANGES ---
+*/
+@media all and (max-width: 1150px) {
+	#wrapper {
+		padding: 0;
+	}
+
+	.heading {
+		padding-bottom: 1.8em;
+	}
+
+	.heading > a {
+		display: none;
+	}
+	.display-helper--container {
+		display: block;
+	}
+	.display {
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	.display-cell {
+		width: 2% !important;
+	}
+	.helper-text {
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+		display: block;
+		min-width: unset;
+		border-left: none; /* No side bar on mobile */
+		border-top: 4px solid #00BFFF;
+	}
+	.helper-text-description {
+		display: none;
+	}
+
+	.register-buttons--container {
+		width: 100%;
+		/* Use Flexbox with wrap for better button flow */
+		display: flex; 
+		flex-wrap: wrap;
+		box-sizing: border-box;
+	}
+
+	/* KEYPAD & EXTRA BUTTON CONTAINERS - Adjusted for 2/3 and 1/3 split */
+	.keypad-buttons--container { 
+		width: 66.66667%;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.mobile-only {
+		display: inline-block !important;
+		margin-top: -0.5em !important;
+		margin-right: -1em !important;
+	}
+
+	.extra-buttons--container {
+		width: 33.33334% !important;
+		flex-wrap: wrap;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	/* BUTTON SIZING - Full area, no internal margins */
+	.keypad-button {
+		width: 25%;
+		height: 4.5em;
+		flex-basis: 25%;
+		flex-grow: 1; /* Allow stretching slightly */
+	}
+	.extra-button {
+		width: 50%;
+		height: 4.5em;
+		flex-basis: 50%;
+		flex-grow: 1;
+	}
+
+	/* BUTTON STYLING - Adjusted for mobile touch target */
+	.keypad-button, .extra-button {
+		height: 4.5em;
+		box-sizing: border-box;
+		padding: 1.5em 0 0 0;
+		margin: 0;
+		border-radius: 0;
+		font-size: 1.1em;
+		font-family: 'Roboto Condensed';
+		/* Add borders to define cells */
+		border: 1px solid rgba(0, 0, 0, 0.2); 
+	}
+
+	.extra-button:hover {
+		box-shadow: none !important;
+	}
+
+	.extra-button:active {
+		box-shadow: none !important;
+	}
+
+	/* REGISTERS - Full Width */
+	.registers--container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		box-sizing: border-box;
+		margin-top: 0;
+		border-radius: 0;
+	}
+
+	.register.half {
+		display: inline-block;
+		box-sizing: border-box;
+		width: 45%;
+		margin: 0;
+		flex-grow: 1;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		border-right: 1px solid rgba(0,0,0,0.1); /* Keep right border */
+		border-left: none; /* Removed unnecessary left border */
+		border-radius: 0;
+	}
+	.register.full {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		margin:0;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		border-right: none;
+		border-radius: 0;
+	}
+
+	/* MENU - Electric Blue Background */
+	#menu {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		background-color: #00BFFF; /* Electric Blue Menu Bar */
+		color: #1E2738;
+		transition: height 0.2s ease-in-out;
+		height: 3.3em;
+	}
+
+	#menu > a{
+		display: block;
+		padding: 1.25em;
+		color: #1E2738;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.menu-hidden {
+		height: 0 !important;
+		overflow: hidden;
+	}
+
+	#menu > a:hover {
+		background-color: rgba(0,0,0,0.15);
+	}
+
+	.modal {
+		width: 100% !important;
+		min-width: 10px !important;
+		box-sizing: border-box;
+		min-width: 0;
+		border-radius: 0;
+		max-height: 100vh;
+	}
+
+	#modal-shade {
+		background-color: rgba(0,0,0,0.8);
+	}
+}
+
+/* MODAL STYLES (Cleaned up) */
+.modal {
+	display: block;
+	position: fixed;
+	top: 50vh;
+	left: 50vw;
+	transform: translateY(-50%) translateX(-50%);
+	z-index: 100;
+	padding-bottom: 5em;
+	min-width: 30em;
+	background-color: #2A3547; /* Modal Background */
+	border-radius: 8px;
+	box-shadow: 0 10px 15px rgba(0,0,0,0.5), 0 0 25px rgba(0,0,0,0.2);
+	transition: opacity 0.1s ease-in-out;
+	opacity: 1;
+}
+
+.modal > span.header {
+	display: block;
+	padding: 1.2em;
+	font-size: 1em;
+	position: relative;
+}
+
+.modal > span.header > span {
+	position: absolute;
+	right: 0.6em;
+	top: 0.6em;
+	padding: 0.65em;
+	border-radius: 50%;
+	transition: all 0.1s ease-in-out;
+}
+
+.modal > span.header > span:hover {
+	background-color: rgba(255,255,255,0.1);
+}
+
+.modal > .buttons {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 1em;
+	font-size: 1em;
+	text-align: right;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.modal button:first-child {
+	margin-left: auto;
+	background-color: transparent;
+	color: #E6F1FF; /* Soft white text */
+	text-decoration: none;
+}
+
+.modal button {
+	display: inline-block;
+	outline: none;
+	border: none;
+	font-size: 1em;
+	font-family: 'Roboto', sans-serif;
+    padding: 0.7em 1em;
+    border-radius: 4px;
+    color: #1E2738; /* Dark text on button */
+    background: #00BFFF; /* Electric Blue Button */
+    transition: all 0.1s ease-in-out;
+}
+
+.modal button:disabled{
+	opacity: 0.3;
+}
+
+.modal button:last-child {
+	color: #1E2738;
+	background-color: #00BFFF;
+	box-shadow: none;
+}
+
+.modal button:hover {
+   background-color: #007AA3;
+   box-shadow: none;
+   color: #FFFFFF;
+   text-decoration: none;
+}
+
+.modal button:active  {
+   background-color: #005075;
+   color: #FFFFFF;
+   text-decoration: none;
+   transition: none;
+}
+
+.modal.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+.disable-selection {
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.modal >iframe {
+	outline: none;
+	border: 0;
+	width: 100%;
+	color: white;
+	height: 450px;
+	max-height: calc(100vh - 130px);
+	background-color: #2A3547; /* Ensure iframe is on a dark background */
+}
+
+#modal-shade {
+	z-index: 99;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.7);
+	transition: opacity 0.2s ease-in-out;
+}
+
+#modal-shade.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
