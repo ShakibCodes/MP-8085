@@ -67,7 +67,7 @@ html, body {
 #toolbar {
 	height: 3em;
 	position: relative;
-	background-color: rgb(0,7,5,0.87);
+	background-color: rgb(5,7,0,0.87);
 	padding-left: 0.5em;
 	box-sizing: border-box;
 	overflow-y: hidden;
@@ -76,7 +76,7 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	box-shadow: 0 4px 4px #202725;
+	box-shadow: 0 4px 4px #252520;
 }
 
 #toolbar i {
@@ -87,7 +87,7 @@ html, body {
 	position: relative;
 	transition: all 0.1s ease-in-out; 
 	cursor: default;
-	color: rgba(0,253,214,1) !important;
+	color: rgba(0,180,255,1) !important;
 }
 
 #toolbar i:hover {
@@ -133,7 +133,7 @@ html, body {
 #more-menu {
 	display: block;
 	position: absolute;
-	background-color: #232725;
+	background-color: #252523;
 	z-index: 100;
 	right: 0.3em;
 	margin-top: -2.2em;
@@ -183,7 +183,7 @@ html, body {
 	display: block;
 	height: 35vh;
 	width: 100%;
-	background-color: rgb(0,10,7,0.92);
+	background-color: rgb(7,10,0,0.92);
 	z-index: 5;
 	position: relative;
 	box-shadow: 0 -2px 4px rgba(0,0,0,0.15);
@@ -198,7 +198,7 @@ html, body {
 	z-index: 100;
 	padding-bottom: 5em;
 	min-width: 30em;
-	background-color: #202725;
+	background-color: #252520;
 	border-radius: 15px;
 	box-shadow: 0 10px 15px rgba(0,0,0,0.5), 0 0 25px rgba(0,0,0,0.2);
 	transition: opacity 0.1s ease-in-out;
@@ -233,7 +233,7 @@ html, body {
 }
 
 .modal > span.body > a {
-	color: rgba(0,153,114,1);
+	color: rgba(0,120,200,1);
 }
 
 .modal > input[type=file] {
@@ -251,7 +251,7 @@ html, body {
   border-radius: 2px;
   margin-right: 1em;
   color: rgba(0,0,0,0.9);
-  background-color: rgb(0,253,214);
+  background-color: rgb(0,180,255);
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   transition: all 0.1s ease-in-out;
 }
@@ -263,17 +263,17 @@ html, body {
   border-radius: 4px;
   margin-right: 1em;
   color: rgba(0,0,0,0.9);
-  background-color: rgb(0,253,214);
+  background-color: rgb(0,180,255);
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .modal > input[type=file]::-webkit-file-upload-button:hover {
-   background-color: rgb(0,213,174);
+   background-color: rgb(0,150,220);
    box-shadow: 0 3px 6px rgba(0,0,0,0.5);
 }
 
 .modal > input[type=file]::-webkit-file-upload-button:active  {
-   background-color: rgba(0,213,174,0.7);
+   background-color: rgba(0,150,220,0.7);
    transition: none;
 }
 
@@ -340,7 +340,7 @@ html, body {
   background:none;
   text-decoration: underline;
   transition: all 0.1s ease-in-out;
-  background-color: rgb(0,253,214);
+  background-color: rgb(0,180,255);
 }
 
 .modal button:disabled{
@@ -357,20 +357,20 @@ html, body {
   text-decoration: none;
 
   color: rgba(0,0,0,0.9);
-  background-color: rgb(0,253,214);
+  background-color: rgb(0,180,255);
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
   transition: all 0.1s ease-in-out;
 }
 
 .modal button:hover {
-   background-color: rgb(0,213,174);
+   background-color: rgb(0,150,220);
    box-shadow: 0 3px 6px rgba(0,0,0,0.5);
    color: rgba(0,0,0,0.8);
    text-decoration: none;
 }
 
 .modal button:active  {
-   background-color: rgba(0,213,174,0.7);
+   background-color: rgba(0,150,220,0.7);
    color: rgba(0,0,0,0.8);
    text-decoration: none;
    transition: none;
@@ -428,14 +428,14 @@ html, body {
 	display: block;
 	cursor: default;
 	height: 2.2em;
-	background-color: rgba(0,7,5,0.4);
+	background-color: rgba(5,7,0,0.4);
 	position: fixed;
 	width: 100%;
 	z-index: 5;
 }
 
 .tabs {
-	background-color: rgba(0,7,5,0.4);
+	background-color: rgba(5,7,0,0.4);
 }
 
 .view {
@@ -465,8 +465,8 @@ html, body {
 }
 
 .tabber-tabs--tab.active, .tabs > .tab.active {
-	border-bottom: solid 3px rgba(0,253,214,1);
-	color: rgba(0,253,214,0.7);
+	border-bottom: solid 3px rgba(0,180,255,1);
+	color: rgba(0,180,255,0.7);
 }
 
 .tabber-tabs--tab:hover, .tabs > .tab:hover {
@@ -566,7 +566,7 @@ html, body {
 	display: block;
 	position: absolute;
 	top: -0.65em;
-	background-color: #132015;
+	background-color: #151320;
 	padding: 0 0.5em;
 }
 
@@ -621,7 +621,7 @@ html, body {
 .tabber-view--top-banner {
 	display: block;
 	padding: 0.75em 1em;
-	background-color: rgba(0,153,114,1);
+	background-color: rgba(0,120,200,1);
 	color: rgba(0,0,0,0.8);
 	box-shadow: 0 2px 2px rgba(0,0,0,0.4);
 	position: fixed;
@@ -651,13 +651,13 @@ html, body {
     display: inline-block;
     outline: none;
     transition-duration: 0.3s;
-    background-color: rgba(0,253,214,1);
+    background-color: rgba(0,180,255,1);
     cursor: pointer;
     border-radius: 50%;
 }
 
 .tabber-view--top-banner > input:checked {
-    background-color: rgba(0,253,214,1);
+    background-color: rgba(0,180,255,1);
 }
 
 
@@ -693,7 +693,7 @@ html, body {
 	top: 0;
 	bottom: 0;
 	width: 20em;
-	background-color: #202725;
+	background-color: #252520;
 	box-shadow: -3px 0 3px rgba(0,0,0,0.15);
 	z-index: 15;
 	overflow-y: scroll;
@@ -707,7 +707,7 @@ html, body {
 .sidebar> span#label {
 	display: block;
 	width: 20em;
-	background-color: #202725;
+	background-color: #252520;
 	padding: 0.9em;
 	height: 3em;
 	box-sizing: border-box;
@@ -808,9 +808,9 @@ th.disabled, td.disabled {
     		width: 150px;
     		height: 150px;
     		position: relative;
-    		background-color: rgba(0,253,214,0.8);
+    		background-color: rgba(0,180,255,0.8);
     		border-radius: 150px;
-    		box-shadow: 0 5px 25px rgba(0,253,214,0.3), 0 5px 10px rgba(0,253,214,0.3), 0 0 50px rgba(0,253,214,0.1);
+    		box-shadow: 0 5px 25px rgba(0,180,255,0.3), 0 5px 10px rgba(0,180,255,0.3), 0 0 50px rgba(0,180,255,0.1);
             margin-top: 8vh;
             margin-bottom: 1em;
     	}
@@ -871,7 +871,7 @@ th.disabled, td.disabled {
 
 	/*CodeFlask styling*/
 
-	.codeflask.codeflask--has-line-numbers:before{background-color:rgba(0,0,0,0.1) !important;}.codeflask {  background: rgba(0,7,5,0.87);  color: #bbbbbb;}.token.punctuation {  color: #a1a1a1;}.codeflask .token.keywords {  color: #9dc8a0;}.token.operator {  color: #bcbcbc;}.token.string {  color: #d7504f;}.token.comment {  color: #777777;}.token.function {  color: #037d9e;}.token.boolean {  color: #b059ff;}.token.number {  color: #5f9aa3;}.token.selector {  color: #b059ff;}.token.property {  color: #b059ff;}.token.tag {  color: #b059ff;}.token.attr-value {  color: #b059ff;}
+	.codeflask.codeflask--has-line-numbers:before{background-color:rgba(0,0,0,0.1) !important;}.codeflask {  background: rgba(5,7,0,0.87);  color: #bbbbbb;}.token.punctuation {  color: #a1a1a1;}.codeflask .token.keywords {  color: #9da8c0;}.token.operator {  color: #bcbcbc;}.token.string {  color: #d7504f;}.token.comment {  color: #777777;}.token.function {  color: #037d9e;}.token.boolean {  color: #b059ff;}.token.number {  color: #5f9aa3;}.token.selector {  color: #b059ff;}.token.property {  color: #b059ff;}.token.tag {  color: #b059ff;}.token.attr-value {  color: #b059ff;}
 
 
 	#undo--button, #redo--button, #search--button, #goto--button, #indent-now--button, #autoindent-enable--button {

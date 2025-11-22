@@ -150,8 +150,8 @@ buttons.setup = function(e) {
 		buttons.reset();
 		displayCells.reset();
 		registers.reset();
-		displayCells.setAddress('READ');
-		displayCells.setData('Y!');
+		displayCells.setAddress('FRIE');
+		displayCells.setData('ND');
 	});
 }
 
