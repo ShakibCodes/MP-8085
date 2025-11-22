@@ -17,13 +17,12 @@
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
-/* GLOBAL: Deep Navy Background, Soft White Text */
 html, body {
 	font-family: 'Roboto Mono', 'Courier New', monospace, sans-serif;
 	padding: 0;
 	margin: 0;
-	background-color: #1E2738; /* Deep Navy Blue */
-	color: #E6F1FF; /* Soft White */
+	background-color: rgb(15%,17%,16%);
+	color: white;
 
 	-webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -45,13 +44,12 @@ br {
 	box-sizing: border-box;
 }
 
-/* HEADING: Electric Blue Accent */
 .heading > h1 {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	text-transform: uppercase;
 	font-size: 1.1em;
-	color: #00BFFF; /* Electric Blue Accent */
+	color: rgb(0,253,214);
 	position: relative;
 	margin: 0;
 	box-sizing: border-box;
@@ -60,45 +58,46 @@ br {
 	z-index: 50;
 }
 
-/* HEADING BUTTONS: Subtle Dark Hover/Active */
 .heading > a {
 	cursor: pointer;
 	float: right;
-	color: #E6F1FF;
+	color: white;
 	text-decoration: none;
 	display: block;
-	background-color: transparent;
+	background-color: rgba(0,0,0,0);
 	padding: 0.5em 0.75em;
 	margin-top: -0.5em;
-	border-radius: 4px;
+	border-radius: 50px;
 	transition: all 0.05s ease-in-out;
 }
 
 .heading > a:hover {
 	float: right;
-	color: #FFFFFF;
+	color: white;
 	display: block;
 	text-decoration: none;
 	display: block;
-	background-color: rgba(0,0,0,0.3);
+	background-color: #0bc0a4;
 	padding: 0.5em 0.75em;
 	margin-top: -0.5em;
-	border-radius: 4px;
-	border-bottom: none;
-	transform: none; /* Removed translate */
+	border-radius: 50px;
+	color: rgba(0,0,0,0.85);
+	border-bottom: 2px solid #0b7054;
+	transform: translateY(-4px);
 }
 
 .heading > a:active {
 	float: right;
-	color: #FFFFFF;
+	color: white;
 	text-decoration: none;
 	display: block;
-	background-color: rgba(0,0,0,0.5);
+	background-color: #0bc0a4;
 	padding: 0.5em 0.75em;
-	transform: none; /* Removed translate */
-	border-bottom: none;
+	transform: translateY(-2px);
+	border-bottom: 2px solid rgba(0,0,0,0);
 	margin-top: -0.5em;
-	border-radius: 4px;
+	border-radius: 50px;
+	color: rgba(0,0,0,0.85);
 }
 
 #wrapper {
@@ -112,30 +111,27 @@ br {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
-/* DISPLAY PANEL: Lighter Panel */
 .display {
 	display: flex;
 	flex-direction: row;
-	background-color: #2A3547; /* Lighter Blue-Grey Panel */
+	background-color: rgba(0,7,6,0.3);
 	box-sizing: border-box;
 	border-radius: 5px;
 	height: 80px;
 	width: 356px;
 	box-sizing: border-box;
 	margin-right: 15px;
-	border: 1px solid #00BFFF; /* Electric Blue border */
 }
 
-/* DISPLAY INPUTS: Electric Blue Text */
 .display > input {
 	font-family: 'LCDMono2 Light', 'Courier New', monospace, sans-serif;
 
 	border: none;
-	border-right: 1px solid #1E2738; /* Dark border between cells */
-	color: #00BFFF; /* Electric Blue Text */
+	border-right: 1px solid rgba(255,255,255,0.02);
+	color: rgba(0,253,214, 95%);
 	font-size: 2.3em;
 	font-weight: 300;
 	display: inline-block;
@@ -150,12 +146,12 @@ br {
 }
 
 .display > input:hover {
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.4);
 }
 
 .display > input:focus {
 	border: none;
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(0,0,0,0.3);
 	outline: none;
 }
 
@@ -167,7 +163,7 @@ br {
 }
 
 .display > input:nth-child(5) {
-	border-left: 6px solid #1E2738;
+	border-left: 6px solid rgba(255,255,255,0.02);
 	margin-left: -5px;
 	width: 66px;
 }
@@ -182,10 +178,9 @@ br {
 	border-bottom-right-radius: 5px;
 }
 
-/* HELPER TEXT PANEL: Lighter Panel with Blue Accent */
 .helper-text {
 	display: inline-block;
-	background-color: #2A3547; /* Lighter Blue-Grey Panel */
+	background-color: rgba(0,253,214,0.1);
 	height: 80px;
 	font-size: 0.92em;
 	box-sizing: border-box;
@@ -195,7 +190,6 @@ br {
 	position: relative;
 	min-width: 250px;
 	margin-right: 15px;
-	border-left: 4px solid #00BFFF; /* Electric Blue Accent Bar */
 }
 
 .bottom-text {
@@ -242,28 +236,26 @@ br {
 
 }
 
-/* KEYPAD BUTTONS: Flat, Lighter Panel */
 .keypad-button, .extra-button {
 	display: block;
 	cursor: pointer;
 	height: 84px;
 	width: 84px;
 	margin-bottom: 10px;
-	background-color: #2A3547; /* Lighter Blue-Grey Panel */
+	background-color: rgba(0,0,0,0.7);
 	border-radius: 3px;
 	box-sizing: border-box;
 	padding: 1em;
 	text-align: center;
-	transition: all 0.1s ease-in-out; /* Slower transition */
-	color: #E6F1FF;
+	transition: all 0.05s ease-in-out;
+	color: white;
 	font-size: 1.5em;
-	box-shadow: none; /* Removed 3D Shadow */
-	border: 1px solid transparent;
+	box-shadow: 0 2px 0 rgba(0,0,0,0.9);
 }
 
 .keypad-button > span {
 	display: block;
-	color: #E6F1FF;
+	color: white;
 }
 
 .keypad-button .upper{
@@ -282,40 +274,31 @@ br {
 	margin: 10px 15px 10px 0;  
 }
 
-/* EXTRA BUTTONS: Solid Electric Blue */
 .extra-button {
 	padding: 1em 0.4em;
 	text-align: center;
-	background-color: #00BFFF !important; /* Electric Blue */
-	color: #1E2738; /* Dark Text */
-	box-shadow: none !important;
+	background-color: #0bc0a4 !important;
+	color: rgba(0,0,0,0.8);
+	box-shadow: 0 2px 0px #0b7054 !important;
 }
-
-/* HOVER/ACTIVE: Simple Background Change, No Transform */
 .extra-button:hover {
-	background-color: #007AA3 !important; /* Darker Blue */
-	color: #FFFFFF;
-	box-shadow: none !important;
+	box-shadow: 0 4px 0 #0b7054, 0 6px 0 #0b7054 !important;
 }
 .extra-button:active {
-	background-color: #005075 !important;
-	color: #FFFFFF;
-	box-shadow: none !important;
+	box-shadow: 0 2px 0 #0b7054, 0 4px 0 #0b7054 !important;
 }
-.keypad-button:hover {
-	background-color: #3A4557;
-	border: 1px solid #00BFFF; /* Subtle blue border on hover */
-	box-shadow: none;
-	transform: none;
+.extra-button:hover, .keypad-button:hover {
+	background-color: rgba(0,0,0,0.9);
+	box-shadow: 0 4px 0px rgba(0,0,0,1), 0 6px 0 rgba(0,0,0,0.9);
+	transform: translateY(-4px);
 }
 
-.keypad-button:active {
-	background-color: #4A5567;
-	box-shadow: none;
-	transform: none;
+.extra-button:active, .keypad-button:active {
+	background-color: rgba(0,0,0,1);
+	box-shadow: 0 2px 0px rgba(0,0,0,1), 0 4px 0 rgba(0,0,0,0.9);
+	transform: translateY(-2px);
 }
 
-/* REGISTER PANEL: Lighter Panel */
 .registers--container {
 	display: flex;
 	flex-grow: 1;
@@ -326,17 +309,15 @@ br {
 	margin: 10px 0 17px 0;
 	border-radius: 6px;
 	overflow: hidden;
-	background-color: #2A3547; /* Lighter Blue-Grey Panel */
-	border: 1px solid #1E2738; /* Darker separator */
+	border: 1px solid rgba(0,0,0,20%);
 }
 
-/* REGISTER CELLS: Slight Transparency */
 .register {
 	display: block;
 	padding: 1.2em 0.7em;
-	background-color: rgba(0,0,0,0.1); /* Slight darker tint */
+	background-color: rgba(0,0,0,0.1);
 	margin: 0;
-	border-bottom: 1px solid rgba(0,0,0,0.2);
+	border-bottom: 1px solid rgba(0,0,0,20%);
 }
 
 .register > em {
@@ -348,7 +329,7 @@ br {
 
 .register.half {
 	flex-grow: 1;
-	border-right: 1px solid rgba(0,0,0,0.2);
+	border-right: 1px solid rgba(0,0,0,20%);
 	width: 45%;
 }
 
@@ -367,7 +348,6 @@ br {
 
 .register > i {
 	font-style: normal;
-	color: #00BFFF; /* Electric Blue for Register Values */
 }
 
 .register > b {
@@ -387,13 +367,84 @@ br {
 	margin-left: -0.58em;
 	padding: 0 0.55em;
 	position: relative;
-	color: #00BFFF; /* Electric Blue for Flag Values */
 }
 
-/* Toast Messages */
+#flag-S {
+	margin-left: 0.1em;
+}
+
+#flag-S:before {
+	display: inline-block;
+	content: 'S';
+	position: absolute;
+
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-weight: 700;
+	top: -13px;
+	left: 10px;
+	opacity: 0.5;
+}
+
+#flag-Z:before {
+	display: inline-block;
+	content: 'Z';
+	position: absolute;
+
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-weight: 700;
+	top: -13px;
+	left: 10px;
+	opacity: 0.5;
+}
+
+#flag-AC:before {
+	display: inline-block;
+	content: 'AC';
+	position: absolute;
+
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-weight: 700;
+	top: -13px;
+	left: 7px;
+	opacity: 0.5;
+}
+
+#flag-P:before {
+	display: inline-block;
+	content: 'P';
+	position: absolute;
+
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-weight: 700;
+	top: -13px;
+	left: 10px;
+	opacity: 0.5;
+}
+
+#flag-CY:before {
+	display: inline-block;
+	content: 'CY';
+	position: absolute;
+
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-weight: 700;
+	top: -13px;
+	left: 7px;
+	opacity: 0.5;
+}
+
+#flag-CY {
+	border-right: none;
+}
+
 .toast {
-	background-color: #00BFFF; /* Electric Blue Toast */
-	color: #1E2738;
+	background-color: rgb(0,253,214);
+	color: rgba(0,0,0,0.8);
 	padding: 1em;	
 	top: 4.5em;
 	left: calc(50vw - 100px);
@@ -418,8 +469,8 @@ br {
 }
 
 .toast-black {
-	background-color: #2A3547; /* Darker Toast */
-	color: #E6F1FF;
+	background-color: rgba(0,0,0,0.8);
+	color: rgba(255,255,255,0.8);
 	padding: 1em;	
 	top: 4.5em;
 	left: calc(50vw - 200px);
@@ -441,9 +492,6 @@ br {
 	display: none;
 }
 
-/*
---- MOBILE/RESPONSIVE VIEW CHANGES ---
-*/
 @media all and (max-width: 1150px) {
 	#wrapper {
 		padding: 0;
@@ -472,9 +520,6 @@ br {
 		width: 100%;
 		border-radius: 0;
 		display: block;
-		min-width: unset;
-		border-left: none; /* No side bar on mobile */
-		border-top: 4px solid #00BFFF;
 	}
 	.helper-text-description {
 		display: none;
@@ -482,20 +527,14 @@ br {
 
 	.register-buttons--container {
 		width: 100%;
-		/* Use Flexbox with wrap for better button flow */
-		display: flex; 
 		flex-wrap: wrap;
 		box-sizing: border-box;
 	}
 
-	/* KEYPAD & EXTRA BUTTON CONTAINERS - Adjusted for 2/3 and 1/3 split */
 	.keypad-buttons--container { 
 		width: 66.66667%;
 		padding: 0;
 		margin: 0;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
 	}
 
 	.mobile-only {
@@ -509,54 +548,40 @@ br {
 		flex-wrap: wrap;
 		padding: 0;
 		margin: 0;
-		display: flex;
-		justify-content: space-around;
 	}
-	
-	/* BUTTON SIZING - Full area, no internal margins */
 	.keypad-button {
 		width: 25%;
-		height: 4.5em;
-		flex-basis: 25%;
-		flex-grow: 1; /* Allow stretching slightly */
 	}
 	.extra-button {
 		width: 50%;
-		height: 4.5em;
-		flex-basis: 50%;
-		flex-grow: 1;
 	}
 
-	/* BUTTON STYLING - Adjusted for mobile touch target */
 	.keypad-button, .extra-button {
 		height: 4.5em;
 		box-sizing: border-box;
 		padding: 1.5em 0 0 0;
 		margin: 0;
+		flex-grow: 1;
 		border-radius: 0;
+		overflow-x: hidden;
 		font-size: 1.1em;
 		font-family: 'Roboto Condensed';
-		/* Add borders to define cells */
-		border: 1px solid rgba(0, 0, 0, 0.2); 
 	}
 
 	.extra-button:hover {
-		box-shadow: none !important;
+		box-shadow: 0 4px 10px #0b7054 !important;
 	}
 
 	.extra-button:active {
-		box-shadow: none !important;
+		box-shadow: 0 2px 10px #0b7054 !important;
 	}
 
-	/* REGISTERS - Full Width */
 	.registers--container {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		width: 100%;
 		box-sizing: border-box;
-		margin-top: 0;
-		border-radius: 0;
 	}
 
 	.register.half {
@@ -566,8 +591,7 @@ br {
 		margin: 0;
 		flex-grow: 1;
 		border-bottom: 1px solid rgba(0,0,0,0.1);
-		border-right: 1px solid rgba(0,0,0,0.1); /* Keep right border */
-		border-left: none; /* Removed unnecessary left border */
+		border-left: 1px solid rgba(0,0,0,0.1);
 		border-radius: 0;
 	}
 	.register.full {
@@ -576,18 +600,27 @@ br {
 		box-sizing: border-box;
 		margin:0;
 		border-bottom: 1px solid rgba(0,0,0,0.1);
-		border-right: none;
 		border-radius: 0;
 	}
+	#register-F{
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
 
-	/* MENU - Electric Blue Background */
+	br {
+		display: none;
+	}
+
+	/*Menu
+	*/
 	#menu {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		background-color: #00BFFF; /* Electric Blue Menu Bar */
-		color: #1E2738;
+		background-color: #0bc0a4;
+		color: rgba(0,0,0,0.8);
 		transition: height 0.2s ease-in-out;
 		height: 3.3em;
 	}
@@ -595,7 +628,7 @@ br {
 	#menu > a{
 		display: block;
 		padding: 1.25em;
-		color: #1E2738;
+		color: rgba(0,0,0,0.8);
 		text-decoration: none;
 		cursor: pointer;
 	}
@@ -606,7 +639,7 @@ br {
 	}
 
 	#menu > a:hover {
-		background-color: rgba(0,0,0,0.15);
+		background-color: rgba(0,0,0,0.2);
 	}
 
 	.modal {
@@ -623,7 +656,7 @@ br {
 	}
 }
 
-/* MODAL STYLES (Cleaned up) */
+
 .modal {
 	display: block;
 	position: fixed;
@@ -633,8 +666,8 @@ br {
 	z-index: 100;
 	padding-bottom: 5em;
 	min-width: 30em;
-	background-color: #2A3547; /* Modal Background */
-	border-radius: 8px;
+	background-color: #202725;
+	border-radius: 15px;
 	box-shadow: 0 10px 15px rgba(0,0,0,0.5), 0 0 25px rgba(0,0,0,0.2);
 	transition: opacity 0.1s ease-in-out;
 	opacity: 1;
@@ -657,7 +690,7 @@ br {
 }
 
 .modal > span.header > span:hover {
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgba(0,0,0,0.5);
 }
 
 .modal > .buttons {
@@ -675,8 +708,7 @@ br {
 .modal button:first-child {
 	margin-left: auto;
 	background-color: transparent;
-	color: #E6F1FF; /* Soft white text */
-	text-decoration: none;
+
 }
 
 .modal button {
@@ -685,11 +717,13 @@ br {
 	border: none;
 	font-size: 1em;
 	font-family: 'Roboto', sans-serif;
-    padding: 0.7em 1em;
-    border-radius: 4px;
-    color: #1E2738; /* Dark text on button */
-    background: #00BFFF; /* Electric Blue Button */
-    transition: all 0.1s ease-in-out;
+  padding: 0.7em 1em;
+  border-radius: 4px;
+  color: rgba(255,255,255,0.9);
+  background:none;
+  text-decoration: underline;
+  transition: all 0.1s ease-in-out;
+  background-color: rgb(0,253,214);
 }
 
 .modal button:disabled{
@@ -697,21 +731,30 @@ br {
 }
 
 .modal button:last-child {
-	color: #1E2738;
-	background-color: #00BFFF;
-	box-shadow: none;
+	outline: none;
+	border: none;
+	font-size: 1em;
+	font-family: 'Roboto', sans-serif;
+  padding: 0.7em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+
+  color: rgba(0,0,0,0.9);
+  background-color: rgb(0,253,214);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  transition: all 0.1s ease-in-out;
 }
 
 .modal button:hover {
-   background-color: #007AA3;
-   box-shadow: none;
-   color: #FFFFFF;
+   background-color: rgb(0,213,174);
+   box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+   color: rgba(0,0,0,0.8);
    text-decoration: none;
 }
 
 .modal button:active  {
-   background-color: #005075;
-   color: #FFFFFF;
+   background-color: rgba(0,213,174,0.7);
+   color: rgba(0,0,0,0.8);
    text-decoration: none;
    transition: none;
 }
@@ -737,7 +780,6 @@ br {
 	color: white;
 	height: 450px;
 	max-height: calc(100vh - 130px);
-	background-color: #2A3547; /* Ensure iframe is on a dark background */
 }
 
 #modal-shade {
@@ -747,7 +789,7 @@ br {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.3);
 	transition: opacity 0.2s ease-in-out;
 }
 

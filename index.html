@@ -17,26 +17,17 @@
     <meta name="description" content="A fully-featured 8085 Simulator and Assembler for web browsers. Run or step through your code, generate Hex listings, assemble programs and more."/>
 </head>
 <body>
-	<div class="disable-selection heading"><h1><b>8085•Neutrino</b> Runtime</h1> 
+	<div class="disable-selection heading"><h1>Micro Processor <b>8085</b></h1> 
 		<a href="coder.html" id="assembler--button">ASSEMBLER</a>
-		<a class="material-icons md-24" id="open-file--button" onclick="openMemory()">open_in_browser</a>
-		<a class="material-icons md-24" id="save-file--button" onclick="saveMemory()">save_alt</a>
-		<a class="material-icons md-24" id="open-file--button" onclick="shareMemory()">share</a>
-		<a class="material-icons md-24" id="open-help--button" onclick="showHelp()">help_outline</a>
-		<a class="material-icons md-24 mobile-only" id="menu--button" onclick="toggleMenu()">menu</a>
 	</div>
 	<div id="menu" class="menu-hidden disable-selection">
-		<a class="material-icons md-24" id="open-help--button" onclick="showHelp()">help_outline</a>
-		<a class="material-icons md-24" id="open-file--button" onclick="shareMemory()">share</a>
-		<a class="material-icons md-24" id="save-file--button" onclick="saveMemory()">save_alt</a>
-		<a class="material-icons md-24" id="open-file--button" onclick="openMemory()">open_in_browser</a>
 		<a href="coder.html">ASSEMBLER</a>
 	</div>
 	<div id="load-code" class="toast hidden">Loaded code!</div>
 	<div id="toast" class="toast-black hidden">Loaded code!</div>
 
 	<div id="wrapper">
-	<div class="display-helper--container">
+	<div class="display-helper--container"> <!--display-->
 		<div class="display">
 			<input onClick="this.select(); buttons.setMode('inputAddress');" onfocus="blur();" class="display-cell" type="text" value="" id="data-input-0" maxlength="1"  />
 			<input onClick="this.select(); buttons.setMode('inputAddress');" onfocus="blur();" class="display-cell" type="text" value="" id="data-input-1" maxlength="1"  />
@@ -47,7 +38,7 @@
 		</div>
 		<div class="helper-text">
 			<span class="helper" id="helper-main">
-				<b><span id="helper-microcode">Help Text</span></b>
+				<b><span id="helper-microcode">Comments</span></b>
 				<span id="complete-instruction">Help text about instructions will appear here.</span>
 			</span>
 		</div>
@@ -145,7 +136,7 @@
 	<!-- Requires one or more of L1 requires -->
 	<script type="text/javascript" src="js/manipulators/input.js"></script> <!-- Dependant on DOM-->
 	<script type="text/javascript" src="js/manipulators/keyboardHooks.js"></script> <!-- Dependant on DOM-->
-	<script type="text/javascript" src="js/manipulators/registerDisplay.js"></script>
+	<script type="text/javascript" src="js/manipulators/regis terDisplay.js"></script>
 
 	<!-- Requires one or more of L2 requires -->
 	<script type="text/javascript" src="js/funcs/dict.js"></script>

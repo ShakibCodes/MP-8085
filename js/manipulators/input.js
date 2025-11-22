@@ -84,7 +84,7 @@ buttons.setup = function(e) {
 				displayCells.setData(registers.getRegister(registerNext));
 		}else{
 			displayCells.setData();
-			displayCells.setAddress('Err ');
+			displayCells.setAddress('Error ');
 		}
 	});
 
